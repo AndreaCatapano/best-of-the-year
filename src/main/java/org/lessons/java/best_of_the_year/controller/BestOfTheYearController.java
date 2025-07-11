@@ -12,7 +12,7 @@ public class BestOfTheYearController {
 
     @GetMapping("/")
     public String home(@RequestParam(name = "name") String name, Model model) {
-        model.addAttribute(name);
+        model.addAttribute("name", name);
         return "index";
     }
 
