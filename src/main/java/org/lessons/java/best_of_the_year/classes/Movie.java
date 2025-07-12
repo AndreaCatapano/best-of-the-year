@@ -5,6 +5,7 @@ import java.io.Serializable;
 public class Movie implements Serializable {
     private int id;
     private String name;
+    private String slug;
 
     public Movie() {
     }
@@ -12,6 +13,7 @@ public class Movie implements Serializable {
     public Movie(int id, String name) {
         this.id = id;
         this.name = name;
+        this.slug = Utility.toSlug(name);
     }
 
     public int getId() {
@@ -22,11 +24,19 @@ public class Movie implements Serializable {
         return name;
     }
 
+    public String getSlug() {
+        return slug;
+    }
+
     public void setId(int id) {
         this.id = id;
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    private void setSlug(String slug) {
+        this.slug = slug;
     }
 }

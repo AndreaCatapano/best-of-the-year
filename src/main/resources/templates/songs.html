@@ -10,7 +10,7 @@
 <body>
     <ul>
         <li th:each="song : ${songs}" th:object="${song}">
-            <p>Titolo: <span th:text="*{name}"></span></p>   
+            <a th:href="'/song/' + *{slug}" th:text="*{name}"></a>
         </li>
     </ul>
 </body>
