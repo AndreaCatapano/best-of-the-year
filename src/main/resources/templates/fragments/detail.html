@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head></head>
+
+<body>
+    <div th:fragment="item-detail(item)" th:object="${item}" class="container my-5  ">
+        <h1 th:text="*{name}" class="display-4 text-center" />
+
+
+
+        <a href="javascript:history.back()" class="btn btn-outline-dark btn-lg m-3"> <- Back </a>
+
+    </div>
+</body>
+
+</html>

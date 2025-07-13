@@ -42,8 +42,8 @@ public class BestOfTheYearController {
         }
 
         if (foundSong != null) {
-            model.addAttribute("song", foundSong);
-            return "song-detail";
+            model.addAttribute("item", foundSong);
+            return "detail";
         }
 
         return "page404";
@@ -60,16 +60,16 @@ public class BestOfTheYearController {
         List<Movie> allMovie = getBestMovies();
         Movie foundMovie = null;
 
-        for (Movie song : allMovie) {
-            if (slug.equals(song.getSlug())) {
-                foundMovie = song;
+        for (Movie movie : allMovie) {
+            if (slug.equals(movie.getSlug())) {
+                foundMovie = movie;
                 break;
             }
         }
 
         if (foundMovie != null) {
-            model.addAttribute("movie", foundMovie);
-            return "movie-detail";
+            model.addAttribute("item", foundMovie);
+            return "detail";
         }
 
         return "page404";
