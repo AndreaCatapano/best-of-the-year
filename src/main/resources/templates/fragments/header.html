@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head></head>
+
+<body>
+    <header th:fragment="common-header" class="mt-3">
+        <nav class="container border border-3">
+            <div class="row align-items-stretch d-flex align-items-center">
+                <a class="col-3 fs-2 text-dark text-decoration-none p-3" href="/">Best by</a>
+                <div class="col-9 row p-3 border-start border-3">
+                    <div class="col-3">
+                        <a class="btn btn-outline-dark btn-lg" href="/movies">Movies</a>
+                    </div>
+                    <div class="col-3">
+                        <a class="btn btn-outline-dark btn-lg" href="/songs">Songs</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+</body>
+
+</html>

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title th:text="${movie.name}"></title>
-</head>
+<head th:replace="fragments/head :: common-head"></head>
+
 
 <body>
+
+    <div th:replace="fragments/header :: common-header"></div>
+
+
     <div th:object="${movie}">
         <h1 th:text="*{name}" />
     </div>

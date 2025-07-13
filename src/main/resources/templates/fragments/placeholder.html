@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head></head>
+
+<body>
+    <div th:fragment="colored-card(color, text)" class="row">
+        <div class="col-md-12 mb-4">
+            <div class="ratio ratio-16x9 mb-3">
+                <div
+                    th:class="'bg-' + ${color} + ' bg-opacity-25 border border-' + ${color} + ' rounded d-flex align-items-center justify-content-center'">
+                    <div class="text-center">
+                        <i th:class="'bi bi-play-circle fs-1 text-' + ${color} + ' mb-2'"></i>
+                        <p th:class="'text-' + ${color} + ' mb-0'" th:text="${text}">Default text</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head></head>
+
+<body>
+    <main th:fragment="item-list(items, itemType)" class="container border">
+        <ul class="list-unstyled my-4">
+            <li th:each="item : ${items}" th:object="${item}" class="fs-2 text-center my-2 border-bottom border-3">
+                <a th:href="'/' + ${itemType} + '/' + *{slug}" th:text="*{name}"
+                    class="text-dark text-decoration-none p-3"></a>
+            </li>
+        </ul>
+    
+        <a href="/" class="btn btn-outline-dark btn-lg mb-2"> <- Back </a>
+    </main>
+</body>
+
+</html>
+

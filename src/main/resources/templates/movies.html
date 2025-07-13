@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie</title>
-</head>
+<head th:replace="fragments/head :: common-head"></head>
+
 
 <body>
-    <ul>
-        <li th:each="movie : ${movies}" th:object="${movie}">
-            <a th:href="'/movie/' + *{slug}" th:text="*{name}"></a>
-        </li>
-    </ul>
+
+    <div th:replace="fragments/header :: common-header"></div>
+
+
+    <div th:replace="fragments/content-list :: item-list(${movies}, 'movie')"></div>
+
+
+
 </body>
 
 </html>

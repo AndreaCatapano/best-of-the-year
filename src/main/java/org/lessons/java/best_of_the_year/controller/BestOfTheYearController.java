@@ -17,8 +17,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class BestOfTheYearController {
 
     @GetMapping("/")
-    public String home(@RequestParam(name = "name") String name, Model model) {
-        model.addAttribute("name", name);
+    public String home(@RequestParam(name = "name", required = false) String name, Model model) {
+        String displayName = (name != null && !name.trim().isEmpty()) ? name : "Admin";
+        model.addAttribute("name", displayName);
         return "index";
     }
 
